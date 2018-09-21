@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Mike Castor - Software Developer',
   },
-  pathPrefix: '/gatsby',
+  pathPrefix: '/portfolio-mc',
   plugins: [
     {
       resolve: 'gatsby-plugin-google-analytics',
