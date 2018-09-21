@@ -1,0 +1,40 @@
+{
+  "name": "portfolio-mc",
+  "description": "Mike Castor's Portfolio",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.7.1",
+    "gatsby": "^2.0.0",
+    "gatsby-image": "^2.0.7",
+    "gatsby-link": "^2.0.1",
+    "gatsby-plugin-favicon": "^3.1.4",
+    "gatsby-plugin-google-analytics": "^2.0.6",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.0.5",
+    "gatsby-plugin-styled-components": "^3.0.0",
+    "gatsby-source-filesystem": "^2.0.1",
+    "gatsby-transformer-sharp": "^2.1.1",
+    "normalize.css": "^8.0.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0",
+    "styled-components": "^3.4.9"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-graphql": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.22.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "gh-pages": "^2.0.0"
+  }
+}
