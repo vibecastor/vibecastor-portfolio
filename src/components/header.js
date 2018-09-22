@@ -51,7 +51,7 @@ export default () => (
       }
     `}
     render={data => (
-      <HeaderWrapper>
+      <HeaderWrapper id='home'>
         <div>
         <Img
           fluid={data.file.childImageSharp.fluid}
