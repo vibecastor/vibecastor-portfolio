@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import ScrollHome from './scrollHome';
+
 const FooterWrapper = styled.div`
   background-color: #888586;
   width: 100%;
@@ -26,13 +28,14 @@ const FooterWrapper = styled.div`
 `;
 
 const Footer = () => (
-    <FooterWrapper>
+    <FooterWrapper id='contact'>
       <ul className='social'>
         <li><a href='mailto:vibecastor@gmail.com'><i className="icon-gmail"></i></a></li>
         <li><a href='https://www.linkedin.com/in/mikecastor'><i className="icon-linkedin"></i></a></li>
         <li><a href='https://github.com/vibecastor'><i className="icon-github"></i></a></li>
       </ul>
       <h4><a href='mailto:vibecastor@gmail.com'>vibecastor@gmail.com</a></h4>
+      <ScrollHome />
     </FooterWrapper>
 );
 
