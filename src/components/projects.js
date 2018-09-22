@@ -1,12 +1,18 @@
 /* eslint-disable max-len */
 import React from 'react';
+import styled from 'styled-components';
+
+const ProjectsWrapper = styled.div`
+  background-color: #888586;
+  padding: 10px;
+`;
 
 import Phrasecraze from '../assets/phrasecraze-image.png';
 import PlentyOfDogs from '../assets/plenty-of-dogs-image.png';
 import EventUs from '../assets/eventus-image.png';
 
 const Projects = () => (
-  <div className='projects'>
+  <ProjectsWrapper className='projects'>
     <h1>Projects</h1>
     <div className='project-container'>
       <ul>
@@ -35,7 +41,7 @@ const Projects = () => (
         </li>
       </ul>
     </div>
-  </div>
+  </ProjectsWrapper>
 
 );
 

@@ -2,7 +2,6 @@ module.exports = {
   siteMetadata: {
     title: 'Mike Castor - Software Developer',
   },
-  pathPrefix: '/portfolio-mc',
   plugins: [
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -55,3 +54,5 @@ module.exports = {
     },
   ],
 };
+
+//   pathPrefix: '/portfolio-mc',
