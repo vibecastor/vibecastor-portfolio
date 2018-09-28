@@ -2,6 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
+import Typed from './typed';
 
 const HomeContainer = styled.div`
   position: relative;
@@ -12,16 +13,21 @@ const HomeContainer = styled.div`
 
 const Banner = styled.div`
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
-  h1 {
-      color: yellow; 
-  }
-  h2 {
-      color: yellow;
-     }
+  color: #E8E7E7;
+  width: 90%;
 `;
+
+const Welcome = styled.h1`
+  margin: auto;
+`;
+
+const WelcomeWrapper = styled.span`
+  display: inline-block;
+`;
+
 
 const scrollDown = (event, section) => {
   event.preventDefault();
@@ -55,13 +61,23 @@ const Home = () => (
         fluid={data.file.childImageSharp.fluid}
         style={{
           width: '100%',
+          opacity: '.90',
+          filter: 'grayscale(80%)',
         }}
       />
         <Banner>
-          <h1>Hello, I'm Mike,</h1>
-          <h2>a creative, full-stack dev in Seattle!</h2>
-
-        <button href='#about' onClick={event => scrollDown(event, 'about')}>click me!</button>
+          <Welcome>
+          <WelcomeWrapper>
+          <h2>Hello, I'm Mike,</h2>
+          <h2>a Seattle based software developer who loves<br />
+            <Typed
+            strings={['Javascript.', 'Node.js', 'Data.']}
+            />
+          </h2>
+          </WelcomeWrapper>
+          </Welcome>
+          <br />
+        <button href='#about' onClick={event => scrollDown(event, 'about')}>scroll down</button>
         </Banner>
       </HomeContainer>
     )}

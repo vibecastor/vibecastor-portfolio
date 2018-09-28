@@ -1,21 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const NavWrapper = styled.div`
-  border-style: dashed;
-  border-color: orange;
+const NavWrapper = styled.ul`
+  display: inline;
   float: right;
-  height: 90px;
-  ul {
-    padding-top: 28px;
-    border-style: dashed;
-    border-color: green;
+  margin-top: 35px; 
     li {
       display: inline;
-      margin: .3em;
-      padding: .3em;
+      margin: .5em;
+      padding: .5em;
     }
-  }
 `;
 
 const scroll = (event, section) => {
@@ -28,11 +22,10 @@ const scroll = (event, section) => {
 
 const Navbar = () => (
   <NavWrapper>
-  <ul>
-    <li><a href="#about" onClick={event => scroll(event, "about")}>about</a></li>
-    <li><a href="#projects" onClick={event => scroll(event, "projects")}>projects</a></li>
-    <li><a href="#contact" onClick={event => scroll(event, "contact")}>contact</a></li>
-  </ul>
+    <li><a href="#about" onClick={event => scroll(event, 'about')}>about</a></li>
+    <li><a href="#projects" onClick={event => scroll(event, 'projects')}>projects</a></li>
+    <li>resume</li>
+    <li><a href="#contact" onClick={event => scroll(event, 'contact')}>contact</a></li>
   </NavWrapper>
 );
 

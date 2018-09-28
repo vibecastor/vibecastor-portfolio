@@ -5,31 +5,20 @@ import styled from 'styled-components';
 
 import NavBar from './navbar';
 
-// import profile from '../assets/profile-small-180x170.jpeg';
 
-
-const HeaderWrapper = styled.div`
-  background: #575358;
-  border-style: dashed;
-  border-color: blue;
+const HeaderWrapper = styled.header`
+  background: #ABB6BA;
+  color: #2F4C54;
   width: 100%;
-  height: 100px;
-  div {
-       border-style: dashed;
-       border-color: yellow; 
-       float: left;
-       display: inline-block;
-       margin-right: 15px;
-      h4 {
+  height: 90px;
+  a {
+    color: #AD662A;
+  }
+      h3 {
           border-style: dashed;
           border-color: green;
-          float: left;
-          margin-left: 10px;
-          padding-top: 25px;
+          display: inline;           
       }
-  }
-  
-  
 `;
 
 export default () => (
@@ -52,22 +41,19 @@ export default () => (
     `}
     render={data => (
       <HeaderWrapper id='home'>
-        <div>
         <Img
           fluid={data.file.childImageSharp.fluid}
           style={{
-            padding: '20px',
+            padding: '30px',
+            margin: '5px',
             borderRadius: '50%',
-            borderStyle: 'dashed',
-            borderColor: 'red',
-            display: 'inline-block',
+            float: 'left',
             marginTop: '10px',
+
           }}
         />
-        <h4>{data.site.siteMetadata.title}</h4>
+        {/*<h3>{data.site.siteMetadata.title}</h3>*/}
           <NavBar/>
-        </div>
-
       </HeaderWrapper>
     )}
   />
