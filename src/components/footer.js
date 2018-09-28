@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import ScrollHome from './scrollHome';
 
 const FooterWrapper = styled.div`
-  background-color: #888586;
-  width: 100%;
+  border-radius: 1%;
+  background-color: #ABB6BA;
   text-align: center;
   padding-top: 1em;
   padding-bottom: 1em;

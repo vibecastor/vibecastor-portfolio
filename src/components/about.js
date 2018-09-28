@@ -5,12 +5,21 @@ import styled from 'styled-components';
 import ScrollHome from './scrollHome';
 
 const AboutWrapper = styled.div`
-  background-color: #888586;
-  padding: 10px;
+  background: #F9F7F2;
+  color: #2F4C54;
+  padding: 25px;
+`;
+
+const AboutCard = styled.div`
+  border-radius: 1%;
+  background: #ABB6BA;
+  color: #2F4C54;
+  padding: 25px;
 `;
 
 const About = () => (
   <AboutWrapper id='about'>
+    <AboutCard>
     <h1>
       About me...
     </h1>
@@ -20,6 +29,7 @@ const About = () => (
 
     <p>I'm at home on any project that requires a creative, organized developer with excellent communication skills.</p>
   <ScrollHome />
+    </AboutCard>
   </AboutWrapper>
 );
 
