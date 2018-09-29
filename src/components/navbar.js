@@ -4,12 +4,23 @@ import styled from 'styled-components';
 const NavWrapper = styled.ul`
   display: inline;
   float: right;
-  margin-top: 35px; 
+  margin-top: 2em;  
+  margin-right: 1em;
     li {
       display: inline;
       margin: .5em;
       padding: .5em;
+      font-size: 125%;
     }
+    a {
+      &:hover {
+        color: #2F4C54;
+      }
+    }
+    
+  @media screen and (max-width: 599px) {
+    display: none;
+  }
 `;
 
 const scroll = (event, section) => {

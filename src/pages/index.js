@@ -6,6 +6,7 @@ import Home from '../components/home';
 import About from '../components/about';
 import Projects from '../components/projects';
 import Footer from '../components/footer';
+import GlobalStyles from '../styledComponents/globalStyles';
 
 export default () => (
   <Fragment>
@@ -22,6 +23,7 @@ export default () => (
       <meta property='og:title' content='Mike Castor - Software Developer' />
       {/* <meta property='og:image' content='' /> */}
     </Helmet>
+    <GlobalStyles/>
     <Header/>
     <Home />
     <About/>
