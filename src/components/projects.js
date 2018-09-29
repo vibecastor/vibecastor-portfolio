@@ -7,7 +7,38 @@ import ScrollHome from './scrollHome';
 
 const ProjectsWrapper = styled.div`
   background-color: #F9F7F2;
-  padding: 25px;
+  padding: 12px;
+  
+    @media screen and (max-width: 599px) {
+      padding: 10px;
+      font-size: 75%;
+       h1 {
+        margin: 5px;
+    }
+    
+    @media screen and (min-width: 600px) {
+      padding: 12px;
+      font-size: 90%;
+       h1 {
+        margin: 5px;
+    }
+  }
+
+    @media screen and (min-width: 900px) {
+      padding: 15px;
+      font-size: 100%;
+       h1 {
+        margin: 12px;
+    }
+  }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 125%;
+      h1 {
+        margin: 12px;
+      }
+    }
+    
 `;
 
 const ProjectsCard = styled.div`
@@ -16,10 +47,32 @@ const ProjectsCard = styled.div`
   color: #2F4C54;
   h2 {
     padding: 12px;
+    margin: 0px;
   }
   p {
     float: left;
-    padding: 7px;
+    padding: 2px;
+  }
+  
+  @media screen and (min-width: 600px) {
+     font-size: 90%;
+     p {
+      margin: 8px; 
+     }
+  }
+
+  @media screen and (min-width: 900px) {
+    font-size: 100%;
+    p {
+      margin: 10px; 
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 125%;
+    p {
+      margin: 15px; 
+    }
   }
 `;
 
@@ -65,7 +118,9 @@ const Projects = () => (
       <Img
         fluid={data.imageOne.childImageSharp.fluid}
         style={{
-          width: '60%',
+          height: 'auto',
+          width: 'auto',
+          bottom: '.5em',
           padding: '5px',
           margin: '10px',
         }}
@@ -80,7 +135,9 @@ const Projects = () => (
         <Img
           fluid={data.imageTwo.childImageSharp.fluid}
           style={{
-            width: '60%',
+            height: 'auto',
+            width: 'auto',
+            bottom: '.5em',
             padding: '5px',
             margin: '10px',
           }}
@@ -95,7 +152,9 @@ const Projects = () => (
           <Img
           fluid={data.imageThree.childImageSharp.fluid}
           style={{
-            width: '60%',
+            height: 'auto',
+            width: 'auto',
+            bottom: '.5em',
             padding: '5px',
             margin: '10px',
           }}

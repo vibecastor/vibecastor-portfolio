@@ -8,6 +8,31 @@ const AboutWrapper = styled.div`
   background: #F9F7F2;
   color: #2F4C54;
   padding: 25px;
+  
+    @media screen and (max-width: 599px) {
+      padding: 10px;
+      font-size: 75%;
+    }
+  
+     @media screen and (min-width: 600px) {
+      font-size: 90%;
+      padding: 12px;
+    }
+    
+    @media screen and (min-width:  900px) {
+    font-size: 100%;
+    padding: 15px;
+  }
+  
+    @media screen and (min-width:     1200px) {
+    font-size: 125%;
+    padding: 15px;
+  }
+  
+   @media screen and (min-width:     1800px) {
+    font-size: 200%;
+    padding: 15px;
+  }
 `;
 
 const AboutCard = styled.div`

@@ -10,7 +10,7 @@ const HeaderWrapper = styled.header`
   background: #ABB6BA;
   color: #2F4C54;
   width: 100%;
-  height: 90px;
+  height: 5em;
   a {
     color: #AD662A;
   }

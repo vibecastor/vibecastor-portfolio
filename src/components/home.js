@@ -13,7 +13,7 @@ const HomeContainer = styled.div`
 
 const Banner = styled.div`
   position: absolute;
-  top: 65%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #E8E7E7;
@@ -22,12 +22,32 @@ const Banner = styled.div`
 
 const Welcome = styled.h1`
   margin: auto;
+  
+  @media screen and (max-width: 599px) {
+    font-size: 80%;
+  }
+  
+  @media screen and (min-width:  600px) {
+    font-size: 90%;
+  }
+  
+  @media screen and (min-width:  900px) {
+    font-size: 100%;
+  }
+  
+  @media screen and (min-width:  1200px) {
+    font-size: 150%;
+  }
+  
+  @media screen and (min-width:  1800px) {
+    font-size: 200%;
+  }
+  
 `;
 
 const WelcomeWrapper = styled.span`
   display: inline-block;
 `;
-
 
 const scrollDown = (event, section) => {
   event.preventDefault();
@@ -75,9 +95,9 @@ const Home = () => (
             />
           </h2>
           </WelcomeWrapper>
+            <br />
+            <button href='#about' onClick={event => scrollDown(event, 'about')}>scroll down</button>
           </Welcome>
-          <br />
-        <button href='#about' onClick={event => scrollDown(event, 'about')}>scroll down</button>
         </Banner>
       </HomeContainer>
     )}
