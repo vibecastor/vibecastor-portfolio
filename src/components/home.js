@@ -2,13 +2,15 @@ import React from 'react';
 import Img from 'gatsby-image';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
+import { ChevronDown } from 'react-feather';
 import Typed from './typed';
+
 
 const HomeContainer = styled.div`
   position: relative;
   margin: 0 auto;
   z-index: 0;
-  text-align: center;
+  text-align: center;  
 `;
 
 const Banner = styled.div`
@@ -22,9 +24,18 @@ const Banner = styled.div`
 
 const Welcome = styled.h1`
   margin: auto;
+  button {
+    opacity: 0.6;
+  }
+  
+  button:hover {opacity: 1}
   
   @media screen and (max-width: 599px) {
     font-size: 80%;
+    button {
+      padding: .7em;
+      margin-bottom: 1.2em;
+    }
   }
   
   @media screen and (min-width:  600px) {
@@ -56,6 +67,8 @@ const scrollDown = (event, section) => {
     block: 'start',
   });
 };
+
+// console.log('ChevronDown', ChevronDown);
 
 const Home = () => (
  <StaticQuery
@@ -96,7 +109,9 @@ const Home = () => (
           </h2>
           </WelcomeWrapper>
             <br />
-            <button href='#about' onClick={event => scrollDown(event, 'about')}>scroll down</button>
+            <button href='#about' onClick={event => scrollDown(event, 'about')}>
+              <ChevronDown color='white' size={28} />
+            </button>
           </Welcome>
         </Banner>
       </HomeContainer>

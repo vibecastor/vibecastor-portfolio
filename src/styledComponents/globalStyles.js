@@ -33,6 +33,16 @@ p {
     line-height: 1.75;
 }
 
+button {
+  background: #ABB6BA;
+  border: 0;
+  border-radius: 50%;
+
+  &:hover {
+    background: #AD662A;
+  }
+}
+
 `;
 
 export default GlobalStyle;
