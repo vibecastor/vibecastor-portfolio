@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Mail, Linkedin, Github } from 'react-feather';
 
 import ScrollHome from './scrollHome';
 
@@ -12,29 +13,46 @@ const FooterWrapper = styled.div`
   h4 {
     margin: 2em;
   }
+  ul {
+    padding-inline-start: 0;
+    padding-bottom: .5em;
+  }
+
   li {
     display: inline;
-    padding: .5em;
-    margin: .1em;
-    color: #ffffff;
-    background-color: #7d8e9b;
+    padding: 1em;
+    margin: .1em;    
     font-size: 1.2em;
     border-radius: 50%;
     border-style: solid;
     border-width: .1em;
     width: 100%;
     height: 100%;
+    
+    &:hover {
+      background: #AD662A;
+    }
+    
+    &:touch {
+      background: #AD662A;
+    }     
   }
 `;
 
 const Footer = () => (
     <FooterWrapper id='contact'>
       <ul className='social'>
-        <li><a href='mailto:vibecastor@gmail.com'><i className="icon-gmail"></i></a></li>
-        <li><a href='https://www.linkedin.com/in/mikecastor'><i className="icon-linkedin"></i></a></li>
-        <li><a href='https://github.com/vibecastor'><i className="icon-github"></i></a></li>
+        <li><a href='mailto:vibecastor@gmail.com'>
+          <Mail/>
+        </a></li>
+        <li><a href='https://www.linkedin.com/in/mikecastor'>
+          <Linkedin/>
+        </a></li>
+        <li><a href='https://github.com/vibecastor'>
+          <Github/>
+        </a></li>
       </ul>
-      <h4><a href='mailto:vibecastor@gmail.com'>vibecastor@gmail.com</a></h4>
+      <p><a href='mailto:vibecastor@gmail.com'>vibecastor@gmail.com</a></p>
       <ScrollHome />
     </FooterWrapper>
 );
