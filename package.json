@@ -24,6 +24,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
+    "react-feather": "^1.1.3",
     "react-helmet": "^5.2.0",
     "styled-components": "^4.0.0-beta.9",
     "typed.js": "^2.0.9"

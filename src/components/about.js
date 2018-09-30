@@ -7,7 +7,6 @@ import ScrollHome from './scrollHome';
 const AboutWrapper = styled.div`
   background: #F9F7F2;
   color: #2F4C54;
-  padding: 25px;
   
     @media screen and (max-width: 599px) {
       padding: 10px;
