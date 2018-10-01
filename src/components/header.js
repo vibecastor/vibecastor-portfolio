@@ -5,15 +5,11 @@ import styled from 'styled-components';
 
 import NavBar from './navbar';
 
-
 const HeaderWrapper = styled.header`
   background: #ABB6BA;
   color: #2F4C54;
   width: 100%;
-  height: 5em;
-  a {
-    color: #AD662A;
-  }
+  // height: 5em;
       h3 {
           border-style: dashed;
           border-color: green;
@@ -44,7 +40,7 @@ export default () => (
         <Img
           fluid={data.file.childImageSharp.fluid}
           style={{
-            padding: '30px',
+            padding: '20px',
             margin: '5px',
             borderRadius: '50%',
             float: 'left',
