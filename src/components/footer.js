@@ -38,6 +38,11 @@ const FooterWrapper = styled.div`
     }     
   }
   
+  p {
+    margin: 1em;
+    padding: .5em;
+  }
+  
   .email {
     color: #AD662A;
     
@@ -50,6 +55,9 @@ const FooterWrapper = styled.div`
     color: #C45445;
   }
   
+  button {
+    margin-bottom: 1em;
+  }
   
 `;
 
