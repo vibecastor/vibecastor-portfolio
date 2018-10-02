@@ -6,15 +6,9 @@ import styled from 'styled-components';
 import NavBar from './navbar';
 
 const HeaderWrapper = styled.header`
-  background: #ABB6BA;
+  background: #242526;
   color: #2F4C54;
   width: 100%;
-  // height: 5em;
-      h3 {
-          border-style: dashed;
-          border-color: green;
-          display: inline;           
-      }
 `;
 
 export default () => (

@@ -26,6 +26,8 @@ import { Menu } from 'react-feather';
 
 const NavBarWrapper = styled.nav`
   width: 100%;
+  font-size: 130%;
+
   
   ul {
     width: 80%;
@@ -51,12 +53,14 @@ const NavBarWrapper = styled.nav`
   .toggle {
     width: 100%;
     padding: 10px 20px;
-    background: #001f44;
     text-align: right;
     box-sizing: border-box;
     color: #fff;
     font-size: 30px;
     display: none;
+    li {
+      background: #001f44;
+    }
   }
   
   @media (max-width: 599px)
@@ -107,6 +111,7 @@ export default class Navbar extends React.Component {
       <NavBarWrapper>
         <div className='toggle'>
           <Menu
+            className='icon'
             onClick={this.ToggleClass}
           />
         </div>
