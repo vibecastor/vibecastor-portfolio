@@ -37,12 +37,26 @@ const FooterWrapper = styled.div`
       background: #AD662A;
     }     
   }
+  
+  .email {
+    color: #AD662A;
+    
+    &:hover {
+      color: rgb(0, 0, 238);
+    }
+  }
+  
+  .gmail {
+    color: #C45445;
+  }
+  
+  
 `;
 
 const Footer = () => (
     <FooterWrapper id='contact'>
       <ul className='social'>
-        <li><a href='mailto:vibecastor@gmail.com'>
+        <li><a className='gmail' href='mailto:vibecastor@gmail.com'>
           <Mail/>
         </a></li>
         <li><a href='https://www.linkedin.com/in/mikecastor'>
@@ -52,7 +66,7 @@ const Footer = () => (
           <Github/>
         </a></li>
       </ul>
-      <p><a href='mailto:vibecastor@gmail.com'>vibecastor@gmail.com</a></p>
+      <p><a className='email' href='mailto:vibecastor@gmail.com'>vibecastor@gmail.com</a></p>
       <ScrollHome />
     </FooterWrapper>
 );

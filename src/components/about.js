@@ -12,24 +12,28 @@ const AboutWrapper = styled.div`
       text-shadow: 7px 20px #2F4C54;
       margin-left: .5em;
     }
+    
+    button {
+      margin: 10px 10px 0px 1px;
+    }
   
     @media screen and (max-width: 599px) {
       padding: 10px;
-      font-size: 75%;
+      font-size: 125%;
     }
   
      @media screen and (min-width: 600px) {
-      font-size: 90%;
+      font-size: 140%;
       padding: 12px;
     }
     
     @media screen and (min-width:  900px) {
-    font-size: 100%;
+    font-size: 155%;
     padding: 15px;
   }
   
     @media screen and (min-width:     1200px) {
-    font-size: 125%;
+    font-size: 170%;
     padding: 15px;
   }
   
@@ -41,7 +45,8 @@ const AboutWrapper = styled.div`
 
 const AboutCard = styled.div`
   border-radius: 1%;
-  background: #ABB6BA;
+  // background: #ABB6BA;
+  background: #AD662A;
   color: #2F4C54;
   padding: 25px;
 `;
@@ -57,8 +62,8 @@ const About = () => (
     <p>I have experience in all areas of the stack from building and designing responsive front-ends to coding RESTful APIs.</p>
 
     <p>I'm at home on any project that requires a creative, organized developer with excellent communication skills.</p>
-  <ScrollHome />
     </AboutCard>
+    <ScrollHome />
   </AboutWrapper>
 );
 

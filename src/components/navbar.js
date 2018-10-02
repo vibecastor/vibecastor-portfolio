@@ -26,9 +26,7 @@ import { Menu } from 'react-feather';
 
 const NavBarWrapper = styled.nav`
   width: 100%;
-  font-size: 130%;
 
-  
   ul {
     width: 80%;
     margin: 0 auto;
@@ -38,7 +36,7 @@ const NavBarWrapper = styled.nav`
   li {
       list-style: none;
       display: inline-block;
-      padding: 20px;
+      padding: .8em;
   }
   
   a {
@@ -75,10 +73,36 @@ const NavBarWrapper = styled.nav`
     li {
       display: block;
       text-align: center;
+      font-size: 180%;
     }
     .active {
       display: block;
     }
+  }
+  
+   @media screen and (min-width: 600px) {
+      li {
+        font-size: 140%;
+      }
+    }
+    
+    @media screen and (min-width:  900px) {
+       li {
+        font-size: 155%;
+       }
+    }
+  
+    @media screen and (min-width:     1200px) {
+       li {
+        font-size: 170;
+       }
+  }
+  
+   @media screen and (min-width:     1800px) {
+       li {
+        font-size: 200%;
+       }
+  }
 `;
 
 
