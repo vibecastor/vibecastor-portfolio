@@ -5,8 +5,13 @@ import styled from 'styled-components';
 import ScrollHome from './scrollHome';
 
 const AboutWrapper = styled.div`
-  background: #F9F7F2;
-  color: #2F4C54;
+  
+
+    h1 { 
+      color: #AD662A;
+      text-shadow: 7px 20px #2F4C54;
+      margin-left: .5em;
+    }
   
     @media screen and (max-width: 599px) {
       padding: 10px;
@@ -43,10 +48,10 @@ const AboutCard = styled.div`
 
 const About = () => (
   <AboutWrapper id='about'>
-    <AboutCard>
     <h1>
       About me...
     </h1>
+    <AboutCard>
     <p>I’m a Seattle based full-stack JavaScript and Node.js developer with a passion for building elegant, bespoke, interactive applications.</p>
 
     <p>I have experience in all areas of the stack from building and designing responsive front-ends to coding RESTful APIs.</p>

@@ -6,22 +6,27 @@ import styled from 'styled-components';
 import ScrollHome from './scrollHome';
 
 const ProjectsWrapper = styled.div`
-  background-color: #F9F7F2;
   padding: 12px;
+  
+   h1 { 
+      color: #AD662A;
+      text-shadow: 7px 20px #2F4C54;
+      margin-left: .5em;
+    }
 
   
     @media screen and (max-width: 599px) {
       padding: 10px;
       font-size: 75%;
        h1 {
-        margin: 1px;
+        margin: 1em;
     }
     
     @media screen and (min-width: 600px) {
       padding: 12px;
       font-size: 90%;
        h1 {
-        margin-top: 1px;
+        margin-top: 1em;
     }
   }
 
@@ -29,7 +34,7 @@ const ProjectsWrapper = styled.div`
       padding: 15px;
       font-size: 100%;
        h1 {
-        margin: 12px;
+        margin: 1em;
     }
   }
 
@@ -46,7 +51,8 @@ const ProjectsCard = styled.div`
   display: inline-block;
   border-radius: 1%;
   background-color: #ABB6BA;
-  color: #2F4C54;
+  // color: #AD662A;
+  // color: #2F4C54;
   margin-bottom: 10px;
   h2 {
     padding: 12px;

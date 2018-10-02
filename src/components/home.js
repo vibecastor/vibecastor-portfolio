@@ -23,9 +23,11 @@ const Banner = styled.div`
 `;
 
 const Welcome = styled.h1`
+  color: #ffffff;
+  text-shadow: 2px 1px #2F4C54;
   margin: auto;
   button {
-    opacity: 0.6;
+    opacity: 0.8;
   }
   
   button:hover {opacity: 1}
@@ -89,7 +91,7 @@ const Home = () => (
       }
     `}
     render={data => (
-      <HomeContainer>
+      <HomeContainer href='home'>
       <Img
         fluid={data.file.childImageSharp.fluid}
         style={{
@@ -109,7 +111,7 @@ const Home = () => (
           </h2>
           </WelcomeWrapper>
             <br />
-            <button href='#about' onClick={event => scrollDown(event, 'about')}>
+            <button onClick={event => scrollDown(event, 'about')}>
               <ChevronDown color='white' size={28} />
             </button>
           </Welcome>
