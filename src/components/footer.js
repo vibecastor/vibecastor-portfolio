@@ -14,11 +14,13 @@ const FooterWrapper = styled.div`
     margin: 2em;
   }
   ul {
+    text-align: center;
     padding-inline-start: 0;
     padding-bottom: .5em;
   }
 
   li {
+    text-align: center;
     display: inline;
     padding: 1em;
     margin: .1em;    
@@ -41,9 +43,11 @@ const FooterWrapper = styled.div`
   p {
     margin: 1em;
     padding: .5em;
+    text-align: center;
   }
   
   .email {
+    text-align: center;
     color: #AD662A;
     
     &:hover {
