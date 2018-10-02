@@ -2,6 +2,9 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
+    
+    // font-family: 'Space Mono', monospace;  
+    font-family: 'Libre Baskerville', serif;
     background: #242526;
     color: #2F4C54;
     font-size: 100%;
@@ -31,6 +34,7 @@ h3 {
 
 p {
     line-height: 1.75;
+    color: black;
 }
 
 button {

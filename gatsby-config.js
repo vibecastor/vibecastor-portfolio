@@ -52,6 +52,15 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'Inknut Antiqua',
+          'Roboto',
+        ],
+      },
+    },
   ],
 };
 
