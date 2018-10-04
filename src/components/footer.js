@@ -10,13 +10,12 @@ const FooterWrapper = styled.div`
   text-align: center;
   padding-top: 1em;
   padding-bottom: 1em;
-  h4 {
-    margin: 2em;
-  }
+
   ul {
     text-align: center;
     padding-inline-start: 0;
     padding-bottom: .5em;
+    margin: 0;
   }
 
   li {

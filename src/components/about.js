@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import styled from 'styled-components';
+import Typed from './typed';
 
 import ScrollHome from './scrollHome';
 
@@ -57,11 +58,17 @@ const About = () => (
       About me...
     </h1>
     <AboutCard>
-    <p>I’m a Seattle based full-stack JavaScript and Node.js developer with a passion for building elegant, bespoke, interactive applications.</p>
-
-    <p>I have experience in all areas of the stack from building and designing responsive front-ends to coding RESTful APIs.</p>
+      {/*<Typed*/}
+      {/*strings={['(function welcome() {<br/>\n'*/}
+      {/*+ 'return \'${greeting} Welcome to my portfolio!\n'*/}
+      {/*+ '}());']}*/}
+      {/*/>*/}
+    <p>I’m a Software Developer with a background in Full Stack JavaScript, React and Node.js.  I have experience in all areas of the stack from building and designing responsive front-ends to coding RESTful APIs.</p>
 
     <p>I'm at home on any project that requires a creative, organized developer with excellent communication skills.</p>
+
+      <p>Some technologies that I have experience with include:
+        Javascript | React | Node | MongoDB | PostgreSQL | GraphQL | HTML | CSS | Jest | Git | Heroku | Netlify | Gatsby | Wordpress | Contentful | JAMstack</p>
     </AboutCard>
     <ScrollHome />
   </AboutWrapper>

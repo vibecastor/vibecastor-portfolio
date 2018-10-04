@@ -7,11 +7,11 @@ export default class Typing extends Component {
     const { strings } = this.props;
     const options = {
       strings,
-      typeSpeed: 80,
-      backSpeed: 50,
+      typeSpeed: 180,
+      backSpeed: 120,
       loop: true,
       onComplete: (self) => {
-        self.startDelay = 100;
+        self.startDelay = 150;
       },
     };
 
