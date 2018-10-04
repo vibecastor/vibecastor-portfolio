@@ -142,7 +142,7 @@ export default class Navbar extends React.Component {
         <ul className={(this.state.isActive) ? 'non-active' : 'active'}>
           <li><a href="#about" onClick={event => scroll(event, 'about')}>about</a></li>
           <li><a href="#projects" onClick={event => scroll(event, 'projects')}>projects</a></li>
-          <li>resume</li>
+          {/*<li>resume</li>*/}
           <li><a href="#contact" onClick={event => scroll(event, 'contact')}>contact</a></li>
         </ul>
       </NavBarWrapper>

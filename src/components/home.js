@@ -25,7 +25,8 @@ const Banner = styled.div`
 const Welcome = styled.h1`
   color: #ffffff;
   text-shadow: 2px 1px #2F4C54;
-  margin: auto;
+  margin: auto; 
+  
   button {
     opacity: 0.8;
   }
@@ -103,15 +104,15 @@ const Home = () => (
         <Banner>
           <Welcome>
           <WelcomeWrapper>
-          <h2>Hello, I'm Mike,</h2>
-          <h2>a Seattle based software developer who loves<br />
-            <Typed
-            strings={['Javascript.', 'Node.js', 'Data.']}
-            />
-          </h2>
+            <h1>
+              <Typed
+                strings={['const greeting = \'Hello, I\'m Mike!\';']}
+              />
+          </h1>
           </WelcomeWrapper>
             <br />
-            <button onClick={event => scrollDown(event, 'about')}>
+            <button className='bounce'
+              onClick={event => scrollDown(event, 'about')}>
               <ChevronDown color='white' size={28} />
             </button>
           </Welcome>
