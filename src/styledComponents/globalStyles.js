@@ -2,11 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    
+    max-width: 100%;
     // font-family: 'Space Mono', monospace;  
-    font-family: 'Libre Baskerville', serif;
-    background: #242526;
-    color: #2F4C54;
+    //font-family: 'Libre Baskerville', serif;
+    font-family: 'Roboto';
+    background: #ffffff;
     font-size: 100%;
     height: 100vh;
   }
@@ -38,13 +38,7 @@ p {
 }
 
 button {
-  background: #ABB6BA;
   border: 0;
-  border-radius: 50%;
-
-  &:hover {
-    background: #AD662A;
-  }
 }
 
 `;

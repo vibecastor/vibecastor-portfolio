@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Mail, Linkedin, Github } from 'react-feather';
+import { Mail, Linkedin, GitHub } from 'react-feather';
 
 import ScrollHome from './scrollHome';
 
@@ -65,21 +65,21 @@ const FooterWrapper = styled.div`
 `;
 
 const Footer = () => (
-    <FooterWrapper id='contact'>
-      <ul className='social'>
-        <li><a className='gmail' href='mailto:vibecastor@gmail.com'>
-          <Mail/>
-        </a></li>
-        <li><a href='https://www.linkedin.com/in/mikecastor'>
-          <Linkedin/>
-        </a></li>
-        <li><a href='https://github.com/vibecastor'>
-          <Github/>
-        </a></li>
-      </ul>
-      <p><a className='email' href='mailto:vibecastor@gmail.com'>vibecastor@gmail.com</a></p>
-      <ScrollHome />
-    </FooterWrapper>
+  <FooterWrapper id='contact'>
+    <ul className='social'>
+      <li><a className='gmail' href='mailto:vibecastor@gmail.com'>
+        <Mail />
+      </a></li>
+      <li><a href='https://www.linkedin.com/in/mikecastor'>
+        <Linkedin />
+      </a></li>
+      <li><a href='https://github.com/vibecastor'>
+        <GitHub />
+      </a></li>
+    </ul>
+    <p><a className='email' href='mailto:vibecastor@gmail.com'>vibecastor@gmail.com</a></p>
+    <ScrollHome />
+  </FooterWrapper>
 );
 
 export default Footer;

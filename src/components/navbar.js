@@ -2,28 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Menu } from 'react-feather';
 
-// const NavWrapper = styled.ul`
-//   display: inline;
-//   float: right;
-//   margin-top: 2em;
-//   margin-right: 1em;
-//     li {
-//       display: inline;
-//       margin: .5em;
-//       padding: .5em;
-//       font-size: 125%;
-//     }
-//     a {
-//       &:hover {
-//         color: #2F4C54;
-//       }
-//     }
-//
-//   @media screen and (max-width: 599px) {
-//     display: none;
-//   }
-// `;
-
 const NavBarWrapper = styled.nav`
   width: 100%;
 
@@ -41,11 +19,11 @@ const NavBarWrapper = styled.nav`
   
   a {
     text-decoration: none;
-    color: #AD662A;
+    color: #ffffff;
   }
   
   a:hover {
-    color: #2F4C54;
+    color: #d32f2f;
   } 
   
   .toggle {

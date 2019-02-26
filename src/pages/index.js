@@ -17,17 +17,17 @@ export default () => (
         name='description'
         content='Javascript Developer based in Seattle, WA.  I love Javascript, Node.js, Front-end Development and being creative.'
       />
-      <meta name='referrer' content='origin'/>
+      <meta name='referrer' content='origin' />
       <meta property='og:type' content='website' />
       <meta property='og:url' content='http://www.mikecastor.io' />
       <meta property='og:title' content='Mike Castor - Software Developer' />
       {/* <meta property='og:image' content='' /> */}
     </Helmet>
-    <GlobalStyles/>
-    <Header/>
+    <GlobalStyles />
+    <Header />
     <Home />
-    <About/>
-    <Projects/>
-    <Footer/>
+    <Projects />
+    <About />
+    <Footer />
   </Fragment>
 );

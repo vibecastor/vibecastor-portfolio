@@ -6,12 +6,15 @@ import styled from 'styled-components';
 import NavBar from './navbar';
 
 const HeaderWrapper = styled.header`
-  background: #242526;
-  color: #2F4C54;
+  background: #1a237e;
   width: 100%;
+
+  .bar {
+    background: #000051;
+  }
 `;
 
-export default () => (
+const Header = () => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
@@ -31,6 +34,7 @@ export default () => (
     `}
     render={data => (
       <HeaderWrapper id='home'>
+        <div className='bar'><br /></div>
         <Img
           fluid={data.file.childImageSharp.fluid}
           style={{
@@ -42,9 +46,10 @@ export default () => (
 
           }}
         />
-        {/*<h3>{data.site.siteMetadata.title}</h3>*/}
-          <NavBar/>
+        <NavBar />
       </HeaderWrapper>
     )}
   />
 );
+
+export default Header;
