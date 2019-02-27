@@ -2,11 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Mail, Linkedin, GitHub } from 'react-feather';
 
-import ScrollHome from './scrollHome';
-
 const FooterWrapper = styled.div`
-  border-radius: 1%;
-
+  background: #1a237e;
   text-align: center;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -24,9 +21,6 @@ const FooterWrapper = styled.div`
     padding: 1em;
     margin: .1em;    
     font-size: 1.2em;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: .1em;
     width: 100%;
     height: 100%;
     
@@ -47,19 +41,15 @@ const FooterWrapper = styled.div`
   
   .email {
     text-align: center;
-    color: #AD662A;
+    color: #d32f2f;
     
     &:hover {
-      color: rgb(0, 0, 238);
+      color: #9a0007;
     }
   }
   
   .gmail {
-    color: #C45445;
-  }
-  
-  button {
-    margin-bottom: 1em;
+    color: #9a0007;
   }
   
 `;
@@ -78,7 +68,6 @@ const Footer = () => (
       </a></li>
     </ul>
     <p><a className='email' href='mailto:vibecastor@gmail.com'>vibecastor@gmail.com</a></p>
-    <ScrollHome />
   </FooterWrapper>
 );
 

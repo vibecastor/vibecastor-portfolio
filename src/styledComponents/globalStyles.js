@@ -3,8 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   body {
     max-width: 100%;
-    // font-family: 'Space Mono', monospace;  
-    //font-family: 'Libre Baskerville', serif;
     font-family: 'Roboto';
     background: #ffffff;
     font-size: 100%;

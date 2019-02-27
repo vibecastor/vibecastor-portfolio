@@ -2,7 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-import { Link2, GitHub } from 'react-feather';
+import { SmartPhone, Monitor, Link2, GitHub, Smartphone } from 'react-feather';
 
 import ScrollHome from './scrollHome';
 
@@ -15,6 +15,7 @@ const ProjectsHeader = styled.div`
   opacity: .8;
   height: 3rem;
   border-radius: 0% 0% 5px 5px;
+  margin: 0;
   h1 {
     color: #ffffff;
     font-family: 'Roboto';
@@ -29,13 +30,14 @@ const ProjectsHeader = styled.div`
 
 const ProjectsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(310px, 400px));
   grid-gap: 2rem 2rem;
   margin: 2rem;
+  justify-content: center;
 `;
 
 const ProjectGridItem = styled.article`
-  max-width: 600px;
+  max-width: 1000px;
   display: grid;
   grid-template-columns: 1fr;
   background: #e2e2e2;
@@ -49,6 +51,61 @@ const ProjectGridItem = styled.article`
     top: -10px;
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
   }
+
+  h4 {
+    background: #9a0007;
+    opacity: .8;
+    border-radius: 0px 0px 5px 5px;
+    color: #ffff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 0;
+    padding: .5rem;
+    padding-left: 1rem;
+  }
+  }
+`;
+
+const ProjectContentGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 30% auto auto auto 50%;
+
+  .one {
+    grid-column: 1 / 9;
+    grid-row: 1 / 2;
+  }
+
+  .info {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: centered;
+    padding-top: 1rem;
+    padding-left: 2rem;
+  }
+
+  .three {
+    grid-column: 2 / 9;
+    grid-row: 2 / 3;
+    list-style: none;
+  }
+
+  .four {
+    grid-column: 1 / 9;
+    grid-row: 3 / 4;
+  }
+
+  .five {
+    grid-column: 1 / 9;
+    grid-row: 4 / 5;    
+  }
+
+  .six {
+    grid-column: 1 / 9;
+    grid-row: 5 / 6;
+  }
+
 `;
 
 const TechChips = styled.div`
@@ -81,10 +138,15 @@ const ProjectActions = styled.div`
   padding-right: 1.5rem;
   padding-bottom: .75rem;
 
+  a {
+    text-decoration: none;
+  } 
+  
   button {
-    display: flex;
-    flex-direction: row;
-    //justify-content: center;
+    font-size: .85rem;
+    //height: 3rem;
+    //flex-direction: row;
+    margin: 1rem;
     background: #d32f2f;
     color: #ffffff;
     border-radius: 8px;
@@ -95,7 +157,6 @@ const ProjectActions = styled.div`
       padding-left: .5rem;
     }
   }
-
   button:hover {opacity: 1}
 
 `;
@@ -132,14 +193,14 @@ const Projects = () => (
         }
         imageFour: file(relativePath: { regex: "/Dreaming-of-Thailand.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 699) {
+            fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         imageFive: file(relativePath: { regex: "/Orcasound.png/" }) {
           childImageSharp {
-            fluid(maxWidth: 699) {
+            fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -156,20 +217,21 @@ const Projects = () => (
             <Img
               fluid={data.imageFive.childImageSharp.fluid}
               style={{
+                backGround: '#000000',
                 height: 'auto',
                 width: 'auto',
-                bottom: '.5em',
                 padding: '5px',
                 borderRadius: '5px',
               }}
             />
-            <div className='project-content'>
-              <h2>Orcasound</h2>
-              <ul>
+            <ProjectContentGrid>
+              <h4 className='one'>Orcasound</h4>
+              <Smartphone className='info' size={44} />
+              <ul className='three'>
                 <li>An open source project dedicated to Orca conservation</li>
                 <li></li>
               </ul>
-              <TechChips>
+              <TechChips className='four'>
                 <ul>
                   <li>React</li>
                   <li>Material-ui</li>
@@ -177,11 +239,15 @@ const Projects = () => (
                   <li>Phoenix</li>
                 </ul>
               </TechChips>
-              <ProjectActions>
-                <button>Visit Site <Link2 className='icon' /></button>
-                <button>View Source <GitHub className='icon' /></button>
+              <ProjectActions className='five'>
+                <a href='http://beta.orcasound.net/v2'>
+                  <button type='button'>Visit Site <Link2 className='icon' size={20} /></button>
+                </a>
+                <a href='https://github.com/orcasound/orcasite'>
+                  <button type='button'>Source <GitHub className='icon' size={20} /></button>
+                </a>
               </ProjectActions>
-            </div>
+            </ProjectContentGrid>
           </ProjectGridItem>
           <ProjectGridItem>
             <Img
@@ -189,18 +255,17 @@ const Projects = () => (
               style={{
                 height: 'auto',
                 width: 'auto',
-                bottom: '.5em',
                 padding: '5px',
                 borderRadius: '5px',
               }}
             />
-            <div>
-              <h2>Dreaming of Thailand</h2>
-              <ul>
-                <li>An extremely fast travel photography blog</li>
-                <li></li>
+            <ProjectContentGrid>
+              <h4 className='one'>Dreaming of Thailand</h4>
+              <Monitor className='info' size={44} />
+              <ul className='three'>
+                <li>A JAMStack travel photography blog</li>
               </ul>
-              <TechChips>
+              <TechChips className='four'>
                 <ul>
                   <li>React</li>
                   <li>GraphQL</li>
@@ -208,11 +273,15 @@ const Projects = () => (
                   <li>CSS Grid</li>
                 </ul>
               </TechChips>
-              <ProjectActions>
-                <button>Visit Site  <Link2 className='icon' /></button>
-                <button>View Source  <GitHub className='icon' /></button>
+              <ProjectActions className='five'>
+                <a href='https://dreamingofthailand.com/'>
+                  <button type='button'>Visit Site  <Link2 className='icon' size={20} /></button>
+                </a>
+                <a href='https://github.com/dreaming-of-thailland-blog/dreaming-of-thailand-v2'>
+                  <button type='button'>Source  <GitHub className='icon' size={20} /></button>
+                </a>
               </ProjectActions>
-            </div>
+            </ProjectContentGrid>
           </ProjectGridItem>
         </ProjectsGrid>
       </ProjectsSection>

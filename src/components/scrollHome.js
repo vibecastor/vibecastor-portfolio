@@ -18,7 +18,7 @@ const homeScroller = (event, section) => {
 };
 
 const ScrollHome = () => (
-  <button href='#home' onClick={event => homeScroller(event, 'home')}><ChevronUp color='#2F4C54' size={34}/></button>
+  <button href='#home' onClick={event => homeScroller(event, 'home')}><ChevronUp color='#ffffff' size={34} /></button>
 );
 
 export default ScrollHome;
