@@ -244,7 +244,9 @@ const Home = () => (
               </TitleWrapper>
             </WelcomeWrapper>
             <br />
-            <button className='button'
+            <button
+              className='button'
+              type='button'
               onClick={event => scrollDown(event, 'about')}>
               <ArrowDown color='white' size={28} />
             </button>

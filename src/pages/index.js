@@ -7,8 +7,14 @@ import About from '../components/about';
 import Projects from '../components/projects';
 import Footer from '../components/footer';
 import GlobalStyles from '../styledComponents/globalStyles';
+import styled from 'styled-components';
 
-export default () => (
+const GridLayout = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+`;
+
+const IndexPage = () => (
   <Fragment>
     <Helmet>
       <html lang='en' />
@@ -26,8 +32,12 @@ export default () => (
     <GlobalStyles />
     <Header />
     <Home />
-    <Projects />
-    <About />
+    <GridLayout>
+      <Projects />
+      <About />
+    </GridLayout>
     <Footer />
   </Fragment>
 );
+
+export default IndexPage;

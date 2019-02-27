@@ -1,67 +1,117 @@
 /* eslint-disable max-len */
 import React from 'react';
 import styled from 'styled-components';
-import Typed from './typed';
+import { User } from 'react-feather';
 
 import ScrollHome from './scrollHome';
 
 const AboutWrapper = styled.div`
-    button {
-      margin: 10px 10px 0px 1px;
-    }
-  
-    @media screen and (max-width: 599px) {
-      padding: 10px;
-      font-size: 125%;
-    }
-  
-     @media screen and (min-width: 600px) {
-      font-size: 140%;
-      padding: 12px;
-    }
-    
-    @media screen and (min-width:  900px) {
-    font-size: 155%;
-    padding: 15px;
+  margin: 0rem 1rem 2rem 1rem;
+  display: grid;
+  grid-template-columns: 5% minmax(310px, 1500px) 5%;
+  justify-content: center;
+
+  button {
+    background: #d32f2f;
+    border-radius: 12px;
+    padding: .2rem .6rem .2rem .6rem;
+    width: 100%;
   }
-  
-    @media screen and (min-width:     1200px) {
-    font-size: 170%;
-    padding: 15px;
-  }
-  
-   @media screen and (min-width:     1800px) {
-    font-size: 200%;
-    padding: 15px;
+`;
+
+const AboutHeader = styled.div`
+  background: #000051;
+  opacity: .8;
+  height: 3rem;
+  border-radius: 5px;
+  h1 {
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 1.75rem;
+    padding-left: 1rem;
+    padding-top: .3rem;
   }
 `;
 
 const AboutCard = styled.div`
-  h1 {
-    background: #b03b3c;
-    color: #000000;
-  }
-  border-radius: 1%;
-  // background: #ABB6BA;
+
   background: #e2e2e2;
-  color: #2F4C54;
-  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-right: 2rem;
+  }
+
+  .icon {
+    padding: 1rem;
+    padding-left: 3rem;
+  }
+
+  .tech-intro {
+    p {
+      margin-left: 2.5rem;
+    }
+  }
+`;
+
+const TechList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25px, 100px));
+  grid-gap: 1rem;
+  justify-content: centered;
+
+  li {
+    list-style: none;
+    background: #ff6659;
+    border-radius: 5px;
+    padding: .25rem;
+    padding-left: .5rem;
+    font-size: .8rem;
+    font-weight: 100;
+    opacity: .9;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 const About = () => (
   <AboutWrapper id='about'>
+    <div />
     <AboutCard>
-      <h1>
-        About me...
-      </h1>
-      <p>A Software Developer with a background in Full Stack JavaScript, React and Node.js. I'm currently working on open source and personal projects while seeking a full time role as a developer on a great team!</p>
-
-      <p>Thanks to the many partnerships I built during my career I have a good understanding of what it takes to be successful as a software developer. I'm a self starter with a voracious appetite to learn new technologies and concepts. I thrive best in highly interactive team environments and I'm a skilled communicator. Further, I can add a unique perspective to any team on the cusp or in the midst of large scale growth having helped grow Facebook Seattle from approximatley 150 engineers to over 2000 over a five year period.</p>
-
-      <p>Some technologies that I have experience with include:
-      Javascript (ES6+), React, Node.js, HTML5, CSS3, MongoDB, Apollo, GraphQL, Gatsby.js, Headless Wordpress, Contentful CMS, Netlify CMS, Babel, Webpack, Styled Components, SaSS, Salesforce, Tableau, Git, Object Oriented Design in Javascript, Data Structures and Algorithms</p>
+      <AboutHeader>
+        <h1>About</h1>
+      </AboutHeader>
+      <div className='about-grid'>
+        <div className='icon'>
+          <User size={48} />
+        </div>
+        <p>I'm a Software Developer with a background in Full Stack JavaScript, React and Node.js.<br></br> I'm currently working on open source as well as personal projects while seeking a full-time role as a developer on a great team!</p>
+      </div>
+      <hr />
+      <div className='tech-intro'>
+        <p>Some technologies that I have experience with include:</p>
+      </div>
+      <TechList>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>GraphQL</li>
+        <li>Apollo</li>
+        <li>MongoDB</li>
+        <li>CSS Grid</li>
+        <li>Gatsby</li>
+        <li>Wordpress API</li>
+        <li>Contentful API</li>
+        <li>Material UI</li>
+        <li>Salesforce</li>
+        <li>Tableau</li>
+      </TechList>
+      <ScrollHome />
     </AboutCard>
-    <ScrollHome />
+    <div />
   </AboutWrapper>
 );
 
