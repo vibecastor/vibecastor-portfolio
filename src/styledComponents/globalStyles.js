@@ -39,6 +39,10 @@ button {
   border: 0;
 }
 
+button:focus {
+  outline: none;
+}
+
 `;
 
 export default GlobalStyle;

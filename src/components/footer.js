@@ -24,13 +24,13 @@ const FooterWrapper = styled.div`
     width: 100%;
     height: 100%;
     
-    &:hover {
-      background: #AD662A;
+    a {
+      color: #9a0007;
     }
-    
-    &:touch {
-      background: #AD662A;
-    }     
+
+    a:hover {
+      color: #AD662A;
+    }    
   }
   
   p {
@@ -60,10 +60,10 @@ const Footer = () => (
       <li><a className='gmail' href='mailto:vibecastor@gmail.com'>
         <Mail />
       </a></li>
-      <li><a href='https://www.linkedin.com/in/mikecastor'>
+      <li><a href='https://www.linkedin.com/in/mikecastor' target='_blank' rel='noreferrer'>
         <Linkedin />
       </a></li>
-      <li><a href='https://github.com/vibecastor'>
+      <li><a href='https://github.com/vibecastor' target='_blank' rel='noreferrer'>
         <GitHub />
       </a></li>
     </ul>
