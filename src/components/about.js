@@ -22,19 +22,19 @@ const AboutWrapper = styled.div`
 const AboutHeader = styled.div`
   background: #000051;
   opacity: .8;
+  display: flex;
   height: 3rem;
   border-radius: 5px;
+  padding-bottom: 1.5rem;
   h1 {
     color: #ffffff;
     font-family: 'Roboto';
-    font-size: 1.75rem;
-    padding-left: 1rem;
-    padding-top: .3rem;
+    font-size: 1.65rem;
+    padding-left: 1.5rem;
   }
 `;
 
 const AboutCard = styled.div`
-
   background: #e2e2e2;
   border-radius: 12px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -42,11 +42,40 @@ const AboutCard = styled.div`
     display: grid;
     grid-template-columns: 1fr auto;
     margin-right: 2rem;
+    
+    p {
+      display: flex;
+      padding: 1rem;
+    }
   }
 
   .icon {
+    display: flex;
     padding: 1rem;
     padding-left: 3rem;
+  }
+
+  @media screen and (min-width:  1200px) {
+    .icon {
+      padding: 1.5rem;
+      padding-left: 10rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media screen and (min-width:  1800px) {
+  
+    .icon {
+      padding: 2rem;
+      padding-left: 7rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
   }
 
   .tech-intro {
@@ -70,9 +99,9 @@ const TechList = styled.ul`
     padding-left: .5rem;
     font-size: .8rem;
     font-weight: 100;
-    opacity: .9;
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
   }
+
 `;
 
 const About = () => (
@@ -86,7 +115,9 @@ const About = () => (
         <div className='icon'>
           <User size={48} />
         </div>
-        <p>I'm a Software Developer with a background in Full Stack JavaScript, React and Node.js.<br></br> I'm currently working on open source as well as personal projects while seeking a full-time role as a developer on a great team!</p>
+        <div>
+          <p>I'm a Software Developer with a background in Full Stack JavaScript, React and Node.js.<br></br> I'm currently working on open source as well as personal projects while seeking a full-time role as a developer on a great team!</p>
+        </div>
       </div>
       <hr />
       <div className='tech-intro'>
@@ -111,7 +142,9 @@ const About = () => (
       </TechList>
       <ScrollHome />
     </AboutCard>
+
     <div />
+
   </AboutWrapper>
 );
 

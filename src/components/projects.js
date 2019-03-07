@@ -136,7 +136,7 @@ const ProjectActions = styled.div`
   justify-content: space-around;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-bottom: .75rem;
+  padding-bottom: 1rem;
 
   a {
     text-decoration: none;
@@ -208,7 +208,7 @@ const Projects = () => (
       }
     `}
     render={data => (
-      <ProjectsSection>
+      <ProjectsSection id='projects'>
         <ProjectsHeader>
           <h1>Projects</h1>
         </ProjectsHeader>
@@ -221,15 +221,14 @@ const Projects = () => (
                 height: 'auto',
                 width: 'auto',
                 padding: '5px',
-                borderRadius: '5px',
+                borderRadius: '5px 5px 0px 0px',
               }}
             />
             <ProjectContentGrid>
               <h4 className='one'>Orcasound</h4>
               <Smartphone className='info' size={44} />
               <ul className='three'>
-                <li>An open source project dedicated to Orca conservation</li>
-                <li></li>
+                <li>Listen live to underwater sound in Orca habitat</li>
               </ul>
               <TechChips className='four'>
                 <ul>
@@ -240,10 +239,10 @@ const Projects = () => (
                 </ul>
               </TechChips>
               <ProjectActions className='five'>
-                <a href='http://beta.orcasound.net/v2'>
+                <a href='http://beta.orcasound.net/v2' target='_blank' rel='noreferrer'>
                   <button type='button'>Visit Site <Link2 className='icon' size={20} /></button>
                 </a>
-                <a href='https://github.com/orcasound/orcasite'>
+                <a href='https://github.com/orcasound/orcasite/tree/v2-ui' target='_blank' rel='noreferrer'>
                   <button type='button'>Source <GitHub className='icon' size={20} /></button>
                 </a>
               </ProjectActions>
@@ -256,14 +255,14 @@ const Projects = () => (
                 height: 'auto',
                 width: 'auto',
                 padding: '5px',
-                borderRadius: '5px',
+                borderRadius: '5px 5px 0px 0px',
               }}
             />
             <ProjectContentGrid>
               <h4 className='one'>Dreaming of Thailand</h4>
               <Monitor className='info' size={44} />
               <ul className='three'>
-                <li>A JAMStack travel photography blog</li>
+                <li>A photography blog optimized for high performance image processing</li>
               </ul>
               <TechChips className='four'>
                 <ul>
@@ -274,10 +273,10 @@ const Projects = () => (
                 </ul>
               </TechChips>
               <ProjectActions className='five'>
-                <a href='https://dreamingofthailand.com/'>
+                <a href='https://dreamingofthailand.com/' target='_blank' rel='noreferrer'>
                   <button type='button'>Visit Site  <Link2 className='icon' size={20} /></button>
                 </a>
-                <a href='https://github.com/dreaming-of-thailland-blog/dreaming-of-thailand-v2'>
+                <a href='https://github.com/dreaming-of-thailland-blog/dreaming-of-thailand-v2' target='_blank' rel='noreferrer'>
                   <button type='button'>Source  <GitHub className='icon' size={20} /></button>
                 </a>
               </ProjectActions>

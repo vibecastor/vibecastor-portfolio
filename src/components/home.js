@@ -35,15 +35,45 @@ const Welcome = styled.div`
     padding: .8rem;
     line-height: .75;
     border-radius: 10px;
+
+    .arrow-small {
+      display: none;
+    }
+    .arrow-medium {
+      display: none;
+    }
+    .arrow-large {
+      display: none;
+    }
+    .arrow-extra-large {
+      display: none;
+    }
   }
   
   button:hover {opacity: 1}
-    
+
+
   @media screen and (min-width:  600px) {
     font-size: 90%;
     button {
       margin-top: 4rem;
       padding: 1rem;
+
+      .arrow-extra-small {
+        display: none;
+      }
+      .arrow-small {
+        display: block;
+      }
+      .arrow-medium {
+        display: none;
+      }
+      .arrow-large {
+        display: none;
+      }
+      .arrow-extra-large {
+        display: none;
+      }
     }
   }
   
@@ -52,6 +82,22 @@ const Welcome = styled.div`
     button {
       margin-top: 4rem;
       padding: 1.25rem;
+
+      .arrow-extra-small {
+        display: none;
+      }
+      .arrow-small {
+        display: none;
+      }
+      .arrow-medium {
+        display: block;
+      }
+      .arrow-large {
+        display: none;
+      }
+      .arrow-extra-large {
+        display: none;
+      }
     }
   }
   
@@ -60,6 +106,22 @@ const Welcome = styled.div`
     button {
       margin-top: 4rem;
       padding: 1.4rem;
+
+      .arrow-extra-small {
+        display: none;
+      }
+      .arrow-extra-small {
+        display: none;
+      }
+      .arrow-medium {
+        display: none;
+      }
+      .arrow-large {
+        display: block;
+      }
+      .arrow-extra-large {
+        display: none;
+      }
     }
   }
   
@@ -68,6 +130,22 @@ const Welcome = styled.div`
     button {
       margin-top: 6rem;
       padding: 1.5rem;
+
+      .arrow-extra-small {
+        display: none;
+      }
+      .arrow-extra-small {
+        display: none;
+      }
+      .arrow-medium {
+        display: none;
+      }
+      .arrow-large {
+        display: none;
+      }
+      .arrow-extra-large {
+        display: block;
+      }
     }
   }
 `;
@@ -85,13 +163,30 @@ const TitleWrapper = styled.div`
   color: #ffffff;
   font-family: 'Roboto';
   font-weight: 400;
-  width: 30vh;
+  width: 100%;
+
   
   .one {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
+    .icon-extra-small {
+      display: block;
+    }
+    .icon-small {
+      display: none;
+    }
+    .icon-medium {
+      display: none;
+    }
+    .icon-large {
+      display: none;
+    }
+    .icon-extra-large {
+      display: none;
+    }
   }
 
   .two { 
@@ -100,6 +195,13 @@ const TitleWrapper = styled.div`
     text-align: left;
     height: .5rem;
     padding-bottom: 1rem;
+    padding-right: 5.5rem;
+    padding: 1rem;
+
+    h2 {
+      display: inline;
+      font-size: 140%;
+    }
   }
 
   .three {
@@ -107,22 +209,43 @@ const TitleWrapper = styled.div`
     grid-row: 2 / 3;
     text-align: left;
     height: .5rem;
+    padding-left: 1rem;
     padding-bottom: 2rem;
+
+    h2 {
+      display: inline;
+    }
   }
 
-  @media screen and (min-width:  600px) {
-    width: 40vh;
+  @media screen and (min-width: 600px) {
+    
     font-size: 1.2rem;
     
     .one {
       margin-top: 2rem;
       margin-bottom: 1rem;
+
+      .icon-extra-small {
+        display: none;
+      }
+      .icon-small {
+        display: block;
+      }
+      .icon-medium {
+        display: none;
+      }
+      .icon-large {
+        display: none;
+      }
+      .icon-extra-large {
+        display: none;
+      }
     }
   
-    .two { 
-    
-     
-      padding-bottom: 1.5rem;
+    .two {      
+      padding-top: 3rem;
+      padding-right: 3rem;
+      padding-bottom: 3rem;
     }
   
     .three {
@@ -132,17 +255,34 @@ const TitleWrapper = styled.div`
     
   }
   
-  @media screen and (min-width:  900px) {
-    width: 45vh;
+  @media screen and (min-width: 900px) {
     font-size: 1.5rem;
     
     .one {
       margin-top: 2.5rem;
       margin-bottom: 1rem;
+
+      .icon-extra-small {
+        display: none;
+      }
+      .icon-small {
+        display: none;
+      }
+      .icon-medium {
+        display: block;
+      }
+      .icon-large {
+        display: none;
+      }
+      .icon-extra-large {
+        display: none;
+      }
     }
   
     .two { 
-      padding-bottom: 2rem;
+      padding-top: 3rem;
+      padding-right: 3rem;
+      padding-bottom: 3rem;
     }
   
     .three {
@@ -150,16 +290,33 @@ const TitleWrapper = styled.div`
     }
   }
   
-  @media screen and (min-width:  1200px) {
-    width: 70vh;
+  @media screen and (min-width: 1200px) {
     font-size: 2.5rem;
     
     .one {
       margin-top: 5.5rem;
       margin-bottom: 1rem;
+
+      .icon-extra-small {
+        display: none;
+      }
+      .icon-small {
+        display: none;
+      }
+      .icon-medium {
+        display: none;
+      }
+      .icon-large {
+        display: block;
+      }
+      .icon-extra-large {
+        display: none;
+      }
     }
   
     .two { 
+      padding-top: 4rem;
+      padding-right: 4rem;
       padding-bottom: 4rem;
     }
   
@@ -168,16 +325,33 @@ const TitleWrapper = styled.div`
     }
   }
   
-  @media screen and (min-width:  1800px) {
-    width: 100vh;
+  @media screen and (min-width: 1800px) {
     font-size: 3.5rem;
     
     .one {
       margin-top: 7.5rem;
       margin-bottom: 1rem;
+
+      .icon-extra-small {
+        display: none;
+      }
+      .icon-small {
+        display: none;
+      }
+      .icon-medium {
+        display: none;
+      }
+      .icon-large {
+        display: none;
+      }
+      .icon-extra-large {
+        display: block;
+      }
     }
   
     .two { 
+      padding-top: 5rem;
+      padding-right: 5rem;
       padding-bottom: 5rem;
     }
   
@@ -229,17 +403,43 @@ const Home = () => (
             <WelcomeWrapper>
               <TitleWrapper>
                 <div className='one' >
-                  <div className='icon'>
+                  <div className='icon-extra-small'>
                     <div />
-                    <Monitor size={56} />
+                    <Monitor size={46} />
                     <div />
                   </div>
+
+                  <div className='icon-small'>
+                    <div />
+                    <Monitor size={66} />
+                    <div />
+                  </div>
+
+                  <div className='icon-medium'>
+                    <div />
+                    <Monitor size={76} />
+                    <div />
+                  </div>
+
+                  <div className='icon-large'>
+                    <div />
+                    <Monitor size={106} />
+                    <div />
+                  </div>
+
+                  <div className='icon-extra-large'>
+                    <div />
+                    <Monitor size={146} />
+                    <div />
+                  </div>
+
+
                 </div>
                 <div className='two'>
-                  <h4>Software Developer</h4>
+                  <h2>Software Developer</h2>
                 </div>
                 <div className='three'>
-                  <h3>Mike Castor</h3>
+                  <h2>Mike Castor</h2>
                 </div>
               </TitleWrapper>
             </WelcomeWrapper>
@@ -247,8 +447,24 @@ const Home = () => (
             <button
               className='button'
               type='button'
-              onClick={event => scrollDown(event, 'about')}>
-              <ArrowDown color='white' size={28} />
+              onClick={event => scrollDown(event, 'projects')}>
+              <div className='arrow-extra-small'>
+                <ArrowDown color='white' size={28} />
+              </div>
+              <div className='arrow-small'>
+                <ArrowDown color='white' size={38} />
+              </div>
+              <div className='arrow-medium'>
+                <ArrowDown color='white' size={48} />
+              </div>
+              <div className='arrow-large'>
+                <ArrowDown color='white' size={58} />
+              </div>
+              <div className='arrow-extra-large'>
+                <ArrowDown color='white' size={68} />
+              </div>
+
+
             </button>
           </Welcome>
         </Banner>

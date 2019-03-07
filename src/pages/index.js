@@ -21,7 +21,11 @@ const IndexPage = () => (
       <title>Mike Castor - Software Developer</title>
       <meta
         name='description'
-        content='Javascript Developer based in Seattle, WA.  I love Javascript, Node.js, Front-end Development and being creative.'
+        content='Javascript Developer based in Seattle, WA.'
+      />
+      <meta
+        name='keywords'
+        content='web developer, software developer, front-end developer, javascript developer, react'
       />
       <meta name='referrer' content='origin' />
       <meta property='og:type' content='website' />
