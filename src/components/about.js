@@ -1,151 +1,83 @@
 /* eslint-disable max-len */
 import React from 'react';
-import styled from 'styled-components';
-import { User } from 'react-feather';
-
+import { StaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import ScrollHome from './scrollHome';
 
-const AboutWrapper = styled.div`
-  margin: 0rem 1rem 2rem 1rem;
-  display: grid;
-  grid-template-columns: 5% minmax(310px, 1500px) 5%;
-  justify-content: center;
-
-  button {
-    background: #d32f2f;
-    border-radius: 12px;
-    padding: .2rem .6rem .2rem .6rem;
-    width: 100%;
-  }
-`;
-
-const AboutHeader = styled.div`
-  background: #000051;
-  opacity: .8;
-  display: flex;
-  height: 3rem;
-  border-radius: 5px;
-  padding-bottom: 1.5rem;
-  h1 {
-    color: #ffffff;
-    font-family: 'Roboto';
-    font-size: 1.65rem;
-    padding-left: 1.5rem;
-  }
-`;
-
-const AboutCard = styled.div`
-  background: #e2e2e2;
-  border-radius: 12px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    margin-right: 2rem;
-    
-    p {
-      display: flex;
-      padding: 1rem;
-    }
-  }
-
-  .icon {
-    display: flex;
-    padding: 1rem;
-    padding-left: 3rem;
-  }
-
-  @media screen and (min-width:  1200px) {
-    .icon {
-      padding: 1.5rem;
-      padding-left: 10rem;
-    }
-
-    p {
-      font-size: 1.3rem;
-    }
-  }
-
-  @media screen and (min-width:  1800px) {
-  
-    .icon {
-      padding: 2rem;
-      padding-left: 7rem;
-    }
-
-    p {
-      font-size: 1.4rem;
-    }
-  }
-
-  .tech-intro {
-    p {
-      margin-left: 2.5rem;
-    }
-  }
-`;
-
-const TechList = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25px, 100px));
-  grid-gap: 1rem;
-  justify-content: centered;
-
-  li {
-    list-style: none;
-    background: #ff6659;
-    border-radius: 5px;
-    padding: .25rem;
-    padding-left: .5rem;
-    font-size: .8rem;
-    font-weight: 100;
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-  }
-
-`;
+import {
+  AboutWrapper,
+  AboutCard,
+  TechList,
+} from '../styledComponents/aboutStyles';
 
 const About = () => (
-  <AboutWrapper id='about'>
-    <div />
-    <AboutCard>
-      <AboutHeader>
-        <h1>About</h1>
-      </AboutHeader>
-      <div className='about-grid'>
-        <div className='icon'>
-          <User size={48} />
-        </div>
-        <div>
-          <p>I'm a Software Developer with a background in Full Stack JavaScript, React and Node.js.<br></br> I'm currently working on open source as well as personal projects while seeking a full-time role as a developer on a great team!</p>
-        </div>
-      </div>
-      <hr />
-      <div className='tech-intro'>
-        <p>Some technologies that I have experience with include:</p>
-      </div>
-      <TechList>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>GraphQL</li>
-        <li>Apollo</li>
-        <li>MongoDB</li>
-        <li>CSS Grid</li>
-        <li>Gatsby</li>
-        <li>Wordpress API</li>
-        <li>Contentful API</li>
-        <li>Material UI</li>
-        <li>Salesforce</li>
-        <li>Tableau</li>
-      </TechList>
-      <ScrollHome />
-    </AboutCard>
-
-    <div />
-
-  </AboutWrapper>
+  <StaticQuery
+    query={graphql`
+      query AboutQuery {
+        mikeCabin: file(relativePath: {regex: "/Mike-Cabin.jpg/"}) {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <AboutWrapper id='about'>
+        <div />
+        <AboutCard>
+          <h1>About</h1>
+          <div className='about-grid'>
+            <div className='image'>
+              <div className='flex-item-1' />
+              <Img
+                fluid={data.mikeCabin.childImageSharp.fluid}
+                style={{
+                  flex: 1,
+                  height: 'auto',
+                  maxWidth: '25%',
+                  borderRadius: '50%',
+                }}
+              />
+              <div className='flex-item-3' />
+            </div>
+            <div className='tech-intro' >
+              <p>
+                I'm a Front-End Web Developer with a passion for building useful and creative applications.<br />  I'm open to full-time, contract and freelance opportunities in the Seattle area or remote.<br />  Let's build something great!
+                </p>
+            </div>
+          </div>
+          <hr />
+          <h2>Technology/Skills</h2>
+          <TechList>
+            <li>JavaScript</li>
+            <li>ES6+</li>
+            <li>React</li>
+            <li>Redux</li>
+            <li>Node</li>
+            <li>MERN Stack</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>CSS Grid</li>
+            <li>Material-UI</li>
+            <li>Apollo</li>
+            <li>GraphQL</li>
+            <li>Gatsby</li>
+            <li>MongoDB</li>
+            <li>Contentful</li>
+            <li>Wordpress API</li>
+            <li>Jest</li>
+            <li>Enzyme</li>
+            <li>Salesforce</li>
+            <li>Tableau</li>
+          </TechList>
+          <ScrollHome />
+        </AboutCard>
+        <div />
+      </AboutWrapper >
+    )}
+  />
 );
 
 export default About;
