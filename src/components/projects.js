@@ -17,6 +17,7 @@ import {
   ProjectActions,
 } from '../styledComponents/projectsStyles';
 
+
 const Projects = () => (
   <StaticQuery
     query={graphql`
@@ -77,7 +78,7 @@ const Projects = () => (
                 <a href='http://beta.orcasound.net/v2' target='_blank' rel='noreferrer'>
                   <button type='button'>Visit Site <Link2 className='icon' size={20} /></button>
                 </a>
-                <a href='https://github.com/orcasound/orcasite' target='_blank' rel='noreferrer'>
+                <a href='https://github.com/orcasound/orcasite/tree/v2-ui' target='_blank' rel='noreferrer'>
                   <button type='button'>Source <GitHub className='icon' size={20} /></button>
                 </a>
               </ProjectActions>

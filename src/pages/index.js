@@ -23,6 +23,10 @@ const IndexPage = () => (
         name='description'
         content='Front End Web Developer based in Seattle, WA.'
       />
+      <meta
+        name='keywords'
+        content='web developer, software developer, front-end developer, javascript developer, react'
+      />
       <meta name='referrer' content='origin' />
       <meta property='og:type' content='website' />
       <meta property='og:url' content='http://www.mikecastor.io' />
