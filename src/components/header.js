@@ -1,18 +1,9 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import styled from 'styled-components';
-
 import NavBar from './navbar';
+import HeaderWrapper from '../styledComponents/headerStyles';
 
-const HeaderWrapper = styled.header`
-  background: #1a237e;
-  width: 100%;
-
-  .bar {
-    background: #000051;
-  }
-`;
 
 const Header = () => (
   <StaticQuery

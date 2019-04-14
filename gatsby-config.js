@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Mike Castor - Software Developer',
+    title: 'Mike Castor - Front End Developer',
   },
   plugins: [
     {
@@ -34,10 +34,10 @@ module.exports = {
           coast: false,
           favicons: true,
           firefox: true,
-          opengraph: false,
-          twitter: false,
+          opengraph: true,
+          twitter: true,
           yandex: false,
-          windows: false,
+          windows: true,
         },
       },
     },
@@ -63,5 +63,3 @@ module.exports = {
     },
   ],
 };
-
-//   pathPrefix: '/portfolio-mc',

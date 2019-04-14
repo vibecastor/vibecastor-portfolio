@@ -1,112 +1,24 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { Component } from 'react';
+import { Link } from 'gatsby';
 import { Menu } from 'react-feather';
+import NavBarWrapper from '../styledComponents/navbarStyles';
 
-const NavBarWrapper = styled.nav`
-  width: 100%;
+class Navbar extends Component {
+  state = {
+    isActive: true,
+  };
 
-  ul {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0;
-  }  
-  
-  li {
-      list-style: none;
-      display: inline-block;
-      padding: .8em;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  
-  a:hover {
-    color: #d32f2f;
-  } 
-  
-  .toggle {
-    width: 100%;
-    padding: 10px 20px;
-    text-align: right;
-    box-sizing: border-box;
-    color: #fff;
-    font-size: 30px;
-    display: none;
-    li {
-      background: #001f44;
-    }
-  }
-  
-  @media (max-width: 599px)
-  {
-    .toggle {
-      display: block;
-    }
-    ul {
-      width: 100%;
-      display: none;
-    }
-    li {
-      display: block;
-      text-align: center;
-      font-size: 180%;
-    }
-    .active {
-      display: block;
-    }
-  }
-  
-   @media screen and (min-width: 600px) {
-      li {
-        font-size: 140%;
-      }
-    }
-    
-    @media screen and (min-width:  900px) {
-       li {
-        font-size: 155%;
-       }
-    }
-  
-    @media screen and (min-width:     1200px) {
-       li {
-        font-size: 170;
-       }
-  }
-  
-   @media screen and (min-width:     1800px) {
-       li {
-        font-size: 200%;
-       }
-  }
-`;
-
-
-const scroll = (event, section) => {
-  event.preventDefault();
-  document.getElementById(section).scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-  });
-};
-
-
-
-
-export default class Navbar extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isActive: true,
-    };
-  }
-
-  ToggleClass = (event) => {
+  ToggleClass = () => {
     this.setState({ isActive: !this.state.isActive });
   }
+
+  Scroll = (event, section) => {
+    event.preventDefault();
+    document.getElementById(section).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
 
   render() {
     return (
@@ -118,12 +30,19 @@ export default class Navbar extends React.Component {
           />
         </div>
         <ul className={(this.state.isActive) ? 'non-active' : 'active'}>
-          <li><a href="#about" onClick={event => scroll(event, 'about')}>about</a></li>
-          <li><a href="#projects" onClick={event => scroll(event, 'projects')}>projects</a></li>
-          {/*<li>resume</li>*/}
-          <li><a href="#contact" onClick={event => scroll(event, 'contact')}>contact</a></li>
+          <li>
+            <Link to="/#projects" onClick={event => this.Scroll(event, 'projects')}>portfolio</Link>
+          </li>
+          <li>
+            <Link to="/#about" onClick={event => this.Scroll(event, 'about')}>about</Link>
+          </li>
+          <li>
+            <Link to="/#contact" onClick={event => this.Scroll(event, 'contact')}>contact</Link>
+          </li>
         </ul>
       </NavBarWrapper>
     );
   }
 }
+
+export default Navbar;
