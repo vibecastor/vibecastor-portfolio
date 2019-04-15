@@ -31,10 +31,8 @@ const Header = () => (
           style={{
             padding: '20px',
             margin: '5px',
-            borderRadius: '50%',
             float: 'left',
             marginTop: '10px',
-
           }}
         />
         <NavBar />

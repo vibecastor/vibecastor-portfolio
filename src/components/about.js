@@ -1,9 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { StaticQuery } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import ScrollHome from './scrollHome';
-
 import {
   AboutWrapper,
   AboutCard,
@@ -37,7 +36,6 @@ const About = () => (
                   flex: 1,
                   height: 'auto',
                   maxWidth: '25%',
-                  borderRadius: '50%',
                 }}
               />
               <div className='flex-item-3' />

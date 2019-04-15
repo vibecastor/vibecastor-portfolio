@@ -7,6 +7,10 @@ const HeaderWrapper = styled.header`
   .bar {
     background: #000051;
   }
+
+  img {
+    border-radius: 50%;
+  }
 `;
 
 export default HeaderWrapper;

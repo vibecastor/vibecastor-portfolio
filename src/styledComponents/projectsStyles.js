@@ -62,6 +62,7 @@ const ProjectContentGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 30% auto auto auto 50%;
+  padding-bottom: .3rem;
 
   .one {
     grid-column: 1 / 9;
@@ -136,7 +137,7 @@ const ProjectActions = styled.div`
   
   button {
     font-size: .85rem;
-    margin: 1rem;
+    margin: 1rem 1rem 1rem 1rem;
     background: #d32f2f;
     color: #ffffff;
     border-radius: 8px;
