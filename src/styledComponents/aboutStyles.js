@@ -42,6 +42,10 @@ const AboutCard = styled.div`
     align-items: center;
     justify-content: center;
     padding-top: 5px;
+    img {
+      border-radius: 50%;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    }
   }
 
   flex-item-1 {

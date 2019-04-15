@@ -46,7 +46,7 @@ const FooterWrapper = styled.div`
     }
   }
   
-  .gmail {
+  a {
     color: #9a0007;
   }
 `;
