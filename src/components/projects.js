@@ -1,12 +1,7 @@
-import React from 'react';
-import Img from 'gatsby-image';
-import { StaticQuery, graphql } from 'gatsby';
-import {
-  Monitor,
-  Link2,
-  GitHub,
-  Smartphone,
-} from 'react-feather';
+import React from "react";
+import Img from "gatsby-image";
+import { StaticQuery, graphql } from "gatsby";
+import { Monitor, Link2, GitHub, Smartphone } from "react-feather";
 import {
   ProjectsSection,
   ProjectsHeader,
@@ -14,9 +9,8 @@ import {
   ProjectGridItem,
   ProjectContentGrid,
   TechChips,
-  ProjectActions,
-} from '../styledComponents/projectsStyles';
-
+  ProjectActions
+} from "../styledComponents/projectsStyles";
 
 const Projects = () => (
   <StaticQuery
@@ -53,11 +47,11 @@ const Projects = () => (
             <Img
               fluid={data.orcaImage.childImageSharp.fluid}
               style={{
-                backGround: '#000000',
-                height: 'auto',
-                width: 'auto',
-                padding: '5px',
-                borderRadius: '5px 5px 0px 0px',
+                backGround: "#000000",
+                height: "auto",
+                width: "auto",
+                padding: "5px",
+                borderRadius: "5px 5px 0px 0px"
               }}
             />
             <ProjectContentGrid>
@@ -75,11 +69,19 @@ const Projects = () => (
                 </ul>
               </TechChips>
               <ProjectActions className='five'>
-                <a href='http://beta.orcasound.net/v2' target='_blank' rel='noreferrer'>
-                  <button type='button'>Visit Site <Link2 className='icon' size={20} /></button>
+                <a href='http://beta.orcasound.net' target='_blank' rel='noreferrer'>
+                  <button type='button'>
+                    Visit Site <Link2 className='icon' size={20} />
+                  </button>
                 </a>
-                <a href='https://github.com/orcasound/orcasite/tree/v2-ui' target='_blank' rel='noreferrer'>
-                  <button type='button'>Source <GitHub className='icon' size={20} /></button>
+                <a
+                  href='https://github.com/orcasound/orcasite/tree/v2-ui'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <button type='button'>
+                    Source <GitHub className='icon' size={20} />
+                  </button>
                 </a>
               </ProjectActions>
             </ProjectContentGrid>
@@ -88,10 +90,10 @@ const Projects = () => (
             <Img
               fluid={data.thailandImage.childImageSharp.fluid}
               style={{
-                height: 'auto',
-                width: 'auto',
-                padding: '5px',
-                borderRadius: '5px 5px 0px 0px',
+                height: "auto",
+                width: "auto",
+                padding: "5px",
+                borderRadius: "5px 5px 0px 0px"
               }}
             />
             <ProjectContentGrid>
@@ -112,10 +114,18 @@ const Projects = () => (
               </TechChips>
               <ProjectActions className='five'>
                 <a href='https://dreamingofthailand.com/' target='_blank' rel='noreferrer'>
-                  <button type='button'>Visit Site  <Link2 className='icon' size={20} /></button>
+                  <button type='button'>
+                    Visit Site <Link2 className='icon' size={20} />
+                  </button>
                 </a>
-                <a href='https://github.com/dreaming-of-thailland-blog/dreaming-of-thailand-v2' target='_blank' rel='noreferrer'>
-                  <button type='button'>Source  <GitHub className='icon' size={20} /></button>
+                <a
+                  href='https://github.com/dreaming-of-thailland-blog/dreaming-of-thailand-v2'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <button type='button'>
+                    Source <GitHub className='icon' size={20} />
+                  </button>
                 </a>
               </ProjectActions>
             </ProjectContentGrid>
